@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercato XYZ</title>
+</head>
+<body>
+
+    <header>
+        <h1>Benvenuto al Supermercato XYZ</h1>
+        <!-- Altre informazioni dell'header -->
+    </header>
+
+    <nav>
+        <!-- Menù di navigazione -->
+    </nav>
+
+    <section id="prodotti">
+        <!-- Contenuto relativo ai prodotti in vendita -->
+    </section>
+
+    <section id="offerte">
+        <!-- Sezione dedicata alle offerte speciali -->
+    </section>
+
+    <section id="contatti">
+        <!-- Informazioni di contatto del supermercato -->
+    </section>
+
+    <footer>
+        <!-- Informazioni nel piè di pagina -->
+    </footer>
+
+</body>
+</html>
