@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: DodgerBlue;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: LightGray;
+            color: black;
+        }
+        section {
+            margin: 20px 0;
+            background-color: LightGray;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+        .cart-icon {
+            font-size: 24px;
+            margin-right: 5px;
+            color: #ff6f61;
+        }
+        img {
+            max-width: 50px;
+            margin-right: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Supermercato Amendola</h1>
+        <p>Ordina comodamente Online!</p>
+    </header>
+
+    <section>
+        <h2>Effettua un'Ordinazione</h2>
+        <form id="orderForm">
+            <label for="productName">Prodotto:</label>
+            <select id="productName" name="productName" required>
+                <option value="pasta">Pasta</option>
+                <option value="latte">Latte</option>
+                <option value="pane">Pane</option>
+            </select>
+
+            <label for="quantity">Quantità:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="button" onclick="addProduct()">Aggiungi al Carrello</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Carrello</h2>
+        <ul id="cart"></ul>
+        <button type="button" onclick="placeOrder()">Effettua Ordine <span class="cart-icon">🛒</span></button>
+    </section>
+
+    <script>
+        function addProduct() {
+            var productName = document.getElementById('productName').value;
+            var quantity = document.getElementById('quantity').value;
+            var cart = document.getElementById('cart');
+
+            var listItem = document.createElement('li');
+            var productImage = document.createElement('img');
+            productImage.src = getProductImage(productName); 
+            listItem.appendChild(productImage);
+
+            var quantityText = document.createElement('span');
+            quantityText.textContent = ' x ' + quantity;
+            listItem.appendChild(quantityText);
+
+            cart.appendChild(listItem);
+        }
+
+        function placeOrder() {
+            var cartItems = document.getElementById('cart').getElementsByTagName('li');
+            if (cartItems.length > 0) {
+               
+                alert('Ordine effettuato con successo!');
+            } else {
+                alert('Il carrello è vuoto. Aggiungi almeno un prodotto prima di effettuare l\'ordine.');
+            }
+        }
+
+    </script>
+
+</body>
+</html>
