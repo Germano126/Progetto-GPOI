@@ -3,34 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercato XYZ</title>
+    <title>Supermercati Giuseppe Amendola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffa500;
+        }
+
+        header {
+            background-color: #daa520;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Benvenuto al Supermercati Giuseppe Amendola</h1>
-      
-    </header>
+        <h1>Supermercati Giuseppe Amendola</h1>
+        <h2> La nostra sede nel posto migliore (Aquara)
+          <h3>Via Aldo Moro,98, Aquara (SA)
+  </header>
 
-    <nav>
-       
-    </nav>
-
-    <section id="prodotti">
-      
+    <section>
+        <h2>Offerte del giorno</h2>
+        <div class="product">Nutella - €2</div>
+        <div class="product">Pasta - €0,50</div>
+        <div class="product">Coca Cola - €1,50</div>
     </section>
 
-    <section id="offerte">
-       
-    </section>
-
-    <section id="contatti">
-        
-    </section>
-
-    <footer>
-        
-    </footer>
-
+    <section>
+        <h2>Prodotti in Evidenza</h2>
+        <div class="product">Pane - €2</div>
+        <div class="product">Insalata  €3</div>
+        <div class="product"> Nutella Biscuits €3,50</div>
+    </section>      
 </body>
 </html>
